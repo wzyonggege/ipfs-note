@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ipfs-note</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="merchant-admin">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="/src/css/blue.css">
+</head>
+<body>
+  <div id="app">Please wait...</div>
+  <script>
+    window.$docsify = {
+      routerMode: 'history',
+      ext: '',
+      name: 'ipfs-note',
+      basePath: '/api',
+      homepage: 'https://ipfs.io/ipfs/Qmcw3ed5dvoPJ8FRMHo1qwjKEY1abubAXBV4LdWkQPqgcR',
+      plugins: [
+        function (hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span>Powered by <a href="https://ipfsnote.online/">ipfsnote.online</a> &copy;2019.</span>',
+            '<span>Published in <a href="/a" target="_blank">here</a>.</span>',
+            '</footer>'
+          ].join('')
+
+          hook.afterEach(function (html) {
+            return html + footer
+          })
+        }
+      ]
+    }
+  </script>
+  <script src="/src/js/docsify.min.js"></script>
+</body>
+</html>
